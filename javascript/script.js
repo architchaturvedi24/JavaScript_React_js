@@ -1,0 +1,240 @@
+// console.log("Hello World")
+
+// // document.write("Hello world")
+
+// var num = 5;
+// console.log(typeof(num))
+
+//Java Script Variables
+
+/* all variables have 
+Name
+Type
+value or "null"
+to declare a variable
+var variableName
+let x = 10
+x = 20     //Redeclaration is not allowed in let, But re-declaration is not allowed 
+//re-declaration is allowed in var
+*/
+
+// var num = 10;
+// console.log(num)
+// console.log(typeof(num))
+// num = false
+// console.log(num)
+// console.log(typeof(num))
+// num = "Avinash Kushwaha"
+// console.log(num)
+// console.log(typeof(num))
+// num = null
+// console.log(num)
+// console.log(typeof(num))
+// num = undefined
+// console.log(num)
+// console.log(typeof(num))
+
+/* 
+Refrence(object) type -->
+array
+object
+function
+*/
+
+var sayHello = function () {
+  alert("Hello world");
+};
+
+//object
+var numberArray = [1, 2, 3];
+var animals = new Array("cat", "dog", "mouse", "lion");
+//object
+
+// var person = {
+//     name:"Avinash Kushwaha",
+//     age:18,
+//     title:"Student of AIML"
+// }
+
+/* 
+Symbol type: New Primitive data type introduced in ES6d
+
+
+*/
+
+// {/* <script type = "text/javascript"></script> */}
+// const sym1 = Symbol(4)
+// console.log(sym1)
+// const sym2 = Symbol(4)
+// console.log(sym2)
+// if(sym1==sym2){
+//     console.log("true")
+// }
+// else{
+//     console.log("false") //Because Each symbol is different
+// }
+
+var a = 10;
+var b = 13;
+var c = 10;
+// var linebreak = "<br>"
+// document.write(a+b+c)
+// result = a+b+c
+// document.write(result)
+// document.write(linebreak)
+
+a = 10;
+b = 20;
+// document.write("(a<b>) => ")
+// result = (a<b)
+// document.write(result)
+// document.write(linebreak)
+
+// document.write("(a>b) => ")
+// result = (a>b);
+// document.write(result)
+
+//Ternary Opeartor --> variablename = (condition)?value1:value2;
+
+// var age = 21
+// var voteable = (age<18) ? console.log("Too young"):console.log("Young enough");
+
+// var count;
+// document.write("Starting loop" + "<br/>")
+
+// for(count =0; count<10; count++){
+//     document.write("Current Count: "+count)
+//     document.write("<br/>")
+// }
+
+// document.write("Loop Stopped!")
+
+//for in loops
+
+// const person = {
+//   fname: "Avinash",
+//   lname: "Kushwaha",
+//   age: 19,
+// };
+
+// for (let x in person) {
+//   // console.log("Person details: "+x  +": "+person.x) //person.x will return an undefined value.
+// }
+
+var age = 20;
+if (age >= 18) {
+  // console.log("<b>You are eligible to cast the vote.</b>") //Bold works in html file.
+} else {
+  // console.log("You are a minor.")
+}
+
+// var grade = 'A'
+// switch(grade){
+//     case 'A':
+//         console.log("Good job")
+//         break;
+//     case 'B':
+//         console.log("Pretty Good")
+//         break;
+//     case 'C':
+//         console.log("Passed")
+//         break
+//     case 'D':
+//         console.log("Not so good")
+//         break;
+
+//     default:
+//         console.log("Wrong Input")
+// }
+
+// function doWhatever(){
+//     //Code
+// }
+
+//Arrow functions -->
+var add2 = (a, b) => {
+//   console.log(a + b);  //Explicit return. Implicit return is done withoug using curley braces and without writing return on the same line.
+}
+(add2(10,20))
+
+// var person = {
+//     name:"Avinash Kushwaha",
+//     age:20,
+//     isMarried:false,
+//     "address":{
+//         street:'Vinay Nagar',
+//         flatNo:201
+//     }
+// }
+// console.log(person.name)
+// console.log(person.age)
+// console.log(person.isMarried)
+// console.log(person["address"])
+
+var person2 = new Object()
+person2.name = "Avinash"
+person2.age = "20"
+person2.address ={}
+person2.address.street="nagar road"
+person2["address"]["flatNo"] = 33
+
+// console.log(person2)
+
+//array 
+
+// It is an ordered collection of data (either primitive or object depending upon the language). Arrays are used to store multiple values in a single variable.
+//It can be collection of anything.
+//It is a special kind of object.
+/*
+
+
+
+
+*/
+
+var myInfo = new Array();
+var myInfo1 = Array()
+
+console.log(myInfo, myInfo1)
+
+let collection = [
+  {},
+  [],
+  true,
+  "john",
+  function(){},
+  undefined,
+  new String("abc"),
+  new Date(),
+]
+// console.log(collection[3])
+
+collection.teacherName = "john Mac"
+// console.log(collection) // TeacherName will be printed still the size of the array will not change. It will be just stored as a property Name.
+
+let trainerInfo = [
+  "Jitendra",
+  29,
+  "Ghaziabad",
+  {isMarried:true},
+]
+
+console.log(trainerInfo[trainerInfo.length-1])
+
+// HTML DOM is a hierarchial representation of HTML documents. It defines the structure and properties of elements on a webpage, enabling Javascript to  dynamically access, manipulate, and update content, enhancing interactivity and functionality.
+
+//Window Object --> It is object of the browser which is always at top of the hierarchy. It is like an API that is used to set and access all the properties and methods of the browser. It is automatically created the browser.
+//Document object is property of window object. 
+
+
+//Selecting with the tag
+// document.getElementsByTagName("p") --> returns a node list
+
+//Query Selector-->
+// Document.querySelector("myId/myClass/tag") //returns the very first element
+
+// Document.querySelectorAll() //returns the nodelist of all elements 
+
+const element = document.getElementById("myh1")
+let text = element.getAttribute("class")
+document.getElementById("demoClass").innerHTML = text
